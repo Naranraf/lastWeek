@@ -3,11 +3,7 @@ import AppNavbar from "./components/AppNavBar"
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Login from "./pages/Login";
-import NewsDetail from "./pages/NewsDetail";
-import Loader from "./components/Loader";
-import { useSelector } from "react-redux";
-import axios from "axios";
-// import { Navbar } from 'react-bootstrap/Navbar';
+import ProductDetail from './pages/ProductDetail';
 
 function App() {
   // const isLoading = useSelector((state) => state.isLoading);
@@ -25,13 +21,13 @@ function App() {
       <Routes>
         <Route element={<Home />} path="/" />
         <Route element={<Login />} path="/login" />
-        <Route element={<NewsDetail />} path="/news/:id" />
-
+        <Route element={<ProductDetail />} path="/product/:id" />
+        <Route element={<Favorites />} path="/favorites" />
         {/* 
               Rutas Protegidas 
               /purchases
+              necesitamos el inicio de sesion
               */}
-        <Route element={<Favorites />} path="/favorites" />
       </Routes>
     </HashRouter>
   );
