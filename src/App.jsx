@@ -4,19 +4,28 @@ import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import Login from "./pages/Login";
 import ProductDetail from './pages/ProductDetail';
+import Loader from './components/Loader';
+import css from "./App.css"
+import { useSelector } from "react-redux";
+import axios from "axios";
+
 
 function App() {
-  // const isLoading = useSelector((state) => state.isLoading);
+  const isLoading = useSelector((state) => state.isLoading);
 
-  // const productsURL = "https://e-commerce-api-v2.academlo.tech/api/v1/products"
-  // axios.get(productsURL)
+  const productsURL = "https://e-commerce-api-v2.academlo.tech/api/v1/products"
+  const getProductsURL = axios.get(productsURL)
 
-  // const createUserURL = "https://e-commerce-api-v2.academlo.tech/api/v1/users"
-  // axios.post(createUserURL, body)
+  const createUserURL = "https://e-commerce-api-v2.academlo.tech/api/v1/users"
+  const createUser = axios.post(createUserURL, body)
+  
+  // quedamos en la hora de la clase 
 
   return (
     <HashRouter>
-      {/* {isLoading && <Loader />} */}
+      {
+        isLoading && <Loader />
+      }
       <AppNavbar />
       <Routes>
         <Route element={<Home />} path="/" />
