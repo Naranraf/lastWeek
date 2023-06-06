@@ -10,13 +10,13 @@ import { getProducts } from './../store/slices/products.slice';
 const Home = () => {
   const dispatch = useDispatch();
 
-
+  const getProducts = useSelector((state) => state.products);
 
   useEffect(() => {
     dispatch(getProductsThunk());
   }, [dispatch]);
 
-  const getProducts = useSelector((state) => state.products);
+
 
   return (
     <div>
