@@ -6,6 +6,7 @@ export const getProducts = createAsyncThunk("products/getProducts", async () => 
   try {
     const response = await axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/`);
     return response.data;
+   
   } catch (error) {
     console.error("Error al obtener los productos:", error);
     throw error;
@@ -31,6 +32,6 @@ export const getProductsThunk = () => (dispatch) => {
   axios
     .get("https://e-commerce-api-v2.academlo.tech/api/products")
     .then((resp) => dispatch(getProductsAction(resp.data)))
-    .catch((error) => console.error(error))
+    .catch((error) => alert("No sirve la API"))
     .finally(() => dispatch(setIsLoading(false)));
 };

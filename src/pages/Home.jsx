@@ -5,15 +5,18 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { getProducts } from './../store/slices/products.slice';
 
 const Home = () => {
   const dispatch = useDispatch();
+
+
 
   useEffect(() => {
     dispatch(getProductsThunk());
   }, [dispatch]);
 
-  // const newsList = useSelector((state) => state.news);
+  const getProducts = useSelector((state) => state.products);
 
   return (
     <div>
