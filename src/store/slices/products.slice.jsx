@@ -28,3 +28,18 @@ export const getProductsThunk = () => (dispatch) => {
     .catch((error) => console.error(error))
     .finally(() => dispatch(setIsLoading(false)));
 };
+
+
+export const filterCategoryThunk = id => dispatch => {
+  dispatch(setIsLoading(true))
+
+  axios
+    .get(`https://e-commerce-api-v2.academlo.tech/api/v1//products?categoryId=${id}`)
+    .then((resp) => {
+      dispatch(getProducts(resp.data));
+      console.log(resp.data);
+    })
+    .catch((error) => console.error(error))
+    .finally(() => dispatch(setIsLoading(false)));
+}
+
