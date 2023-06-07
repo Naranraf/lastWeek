@@ -110,7 +110,7 @@ const Home = () => {
                       
                       variant="primary"
                       as={Link}
-                      to={`${product.id}`}
+                      to={`product/${product.id}`}
                       >Go somewhere
                       </Button>
                     </Card.Body>
