@@ -7,6 +7,7 @@ import ProductDetail from './pages/ProductDetail';
 import Loader from './components/Loader';
 import {useDispatch, useSelector } from "react-redux";
 import Container from 'react-bootstrap/Container';
+import stylesheet from './App.css'
 
 
 function App() {
