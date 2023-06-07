@@ -5,7 +5,6 @@ import Favorites from "./pages/Favorites";
 import Login from "./pages/Login";
 import ProductDetail from './pages/ProductDetail';
 import Loader from './components/Loader';
-import css from "./App.css"
 import { useSelector } from "react-redux";
 import axios from "axios";
 import Container from 'react-bootstrap/Container';
