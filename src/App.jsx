@@ -5,21 +5,13 @@ import Favorites from "./pages/Favorites";
 import Login from "./pages/Login";
 import ProductDetail from './pages/ProductDetail';
 import Loader from './components/Loader';
-import { useSelector } from "react-redux";
-import axios from "axios";
+import {useDispatch, useSelector } from "react-redux";
 import Container from 'react-bootstrap/Container';
 
 
 function App() {
   const isLoading = useSelector((state) => state.isLoading);
 
-  // const productsURL = "https://e-commerce-api-v2.academlo.tech/api/v1/products"
-  // const getProductsURL = axios.get(productsURL)
-
-  // const createUserURL = "https://e-commerce-api-v2.academlo.tech/api/v1/users"
-  // const createUser = axios.post(createUserURL, body)
-
-  // quedamos en la hora de la clase 
 
   return (
     <HashRouter>

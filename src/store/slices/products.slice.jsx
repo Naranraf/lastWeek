@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { setIsLoading } from "./isLoading.slice";
 
+
 export const productSlice = createSlice({
   name: "products",
   initialState: [],
@@ -23,7 +24,7 @@ export const getProductsThunk = () => (dispatch) => {
     .get("https://e-commerce-api-v2.academlo.tech/api/v1/products/")
     .then((resp) => {
       dispatch(getProducts(resp.data));
-      console.log(resp.data);
+      
     })
     .catch((error) => console.error(error))
     .finally(() => dispatch(setIsLoading(false)));
@@ -37,7 +38,7 @@ export const filterCategoryThunk = id => dispatch => {
     .get(`https://e-commerce-api-v2.academlo.tech/api/v1//products?categoryId=${id}`)
     .then((resp) => {
       dispatch(getProducts(resp.data));
-      console.log(resp.data);
+     
     })
     .catch((error) => console.error(error))
     .finally(() => dispatch(setIsLoading(false)));
