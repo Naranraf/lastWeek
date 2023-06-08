@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       external: [
         'bootswatch/dist/lux/bootstrap.min.css',
-        '/App'
+        '/App','/store',
       ],
     },
   },
