@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
-import { setIsLoading } from "./isLoading.slice";
+import { setIsLoading } from "/isLoading.slice";
 
 
 export const productSlice = createSlice({
