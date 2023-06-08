@@ -1,4 +1,3 @@
-
 import AppNavbar from "/components/AppNavBar"
 import Home from "/pages/Home";
 import Favorites from "/pages/Favorites";
@@ -7,7 +6,7 @@ import ProductDetail from '/pages/ProductDetail';
 import Loader from '/components/Loader';
 import {useDispatch, useSelector } from "react-redux";
 import Container from 'react-bootstrap/Container';
-import { HashRouter,Routes, Route } from 'react-router-dom';
+import { HashRouter,Routes, Route } from "react-router-dom";
 
 
 function App() {
