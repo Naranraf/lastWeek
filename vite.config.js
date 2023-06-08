@@ -5,10 +5,10 @@ export default defineConfig({
   plugins: [react()],
   build: {
     rollupOptions: {
-      external: ['bootswatch/dist/lux/bootstrap.min.css'],
+      external: [
+        'bootswatch/dist/lux/bootstrap.min.css',
+        '/App'
+      ],
     },
-    rollupOptions: {
-      external: ['/App']
-    }
   },
 });
